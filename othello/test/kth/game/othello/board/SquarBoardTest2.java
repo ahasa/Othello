@@ -12,7 +12,7 @@ import org.junit.Test;
 public class SquarBoardTest2 {
 	List<Node> nodes = new ArrayList<>();
 	Board board;
-
+//alsfjkhaklsjh
 	@Before
 	public void init() {
 		nodes.add(new NodeImpl(0, 0, true, "b"));
