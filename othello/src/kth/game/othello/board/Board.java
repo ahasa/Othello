@@ -17,10 +17,12 @@ public interface Board {
 	 */
 	public List<Node> getNodes();
 
-	public boolean nodeExists(int x, int y);
-
-	public Node getNode(int x, int y);
-
 	public Node getNodeById(String nodeId);
+
+	public boolean nodeExists(int i, int j);
+
+	public Node getNode(int i, int j);
+
+	
 
 }

@@ -77,7 +77,7 @@ public class RulesImpTest {
 
 	@Test
 	public void testIsActive() {
-		assertTrue(rules.isActive(players));
+		assertTrue(((RulesImpl) rules).isActive(players));
 	}
 
 }

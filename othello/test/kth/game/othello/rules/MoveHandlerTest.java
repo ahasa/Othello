@@ -12,6 +12,7 @@ import kth.game.othello.board.SquareBoard;
 import kth.game.othello.player.Player;
 import kth.game.othello.player.Player.Type;
 import kth.game.othello.player.PlayerFactory;
+import kth.game.othello.player.strategy.FirstFoundStrategy;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -61,9 +62,9 @@ public class MoveHandlerTest {
 		computer = PlayerFactory.CreatePlayer(Type.COMPUTER);
 		players.add(human);
 		players.add(computer);
-		othello = new OthelloImpl(board, rules, turnHandler);
-		// moveHandler = new MoveHandler(new FirstFoundStrategy(rules, board),
-		// turnHandler);
+		moveHandler = new MoveHandler(turnHandler, ((RulesImpl) rules));
+		othello = new OthelloImpl(board, rules, turnHandler, moveHandler);
+		
 	}
 
 	@Test

@@ -14,7 +14,7 @@ public class SquareBoard implements Board {
 		return nodes;
 	}
 
-	@Override
+	
 	public boolean nodeExists(int x, int y) {
 		boolean exists = false;
 		for (Node n : nodes) {
@@ -24,7 +24,7 @@ public class SquareBoard implements Board {
 		return exists;
 	}
 
-	@Override
+	
 	public Node getNode(int x, int y) {
 		for (Node n : nodes) {
 			if (n.getXCoordinate() == x && n.getYCoordinate() == y) {
@@ -34,7 +34,7 @@ public class SquareBoard implements Board {
 		return null;
 	}
 
-	@Override
+	
 	public Node getNodeById(String nodeId) {
 		Node nodeToAttach = null;
 		for (Node node : this.getNodes()) {

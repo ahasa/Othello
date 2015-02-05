@@ -22,7 +22,7 @@ import org.junit.Test;
 public class TurnHandlerTest {
 	List<Node> nodes = new ArrayList<>();
 	Board board;
-	Rules rules;
+	RulesImpl rules;
 	Othello othello;
 	Player computer;
 	Player human;
@@ -59,8 +59,9 @@ public class TurnHandlerTest {
 		computer = PlayerFactory.CreatePlayer(Type.COMPUTER);
 		players.add(human);
 		players.add(computer);
-		othello = new OthelloImpl(board, rules, turnHandler);
 		moveHandler = new MoveHandler(turnHandler, rules);
+		othello = new OthelloImpl(board, rules, turnHandler, moveHandler);
+		
 	}
 
 	@Test
