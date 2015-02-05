@@ -45,8 +45,6 @@ public interface Rules {
 	 */
 	public boolean hasValidMove(String playerId);
 
-	public boolean isActive(List<Player> list);
-
-	public Board getBoard();
+	
 
 }

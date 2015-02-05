@@ -10,9 +10,9 @@ import kth.game.othello.player.Player.Type;
 
 public class MoveHandler {
 	private TurnHandler turnHandler;
-	private Rules rules;
+	private RulesImpl rules;
 
-	public MoveHandler(TurnHandler turnHandler, Rules rules) {
+	public MoveHandler(TurnHandler turnHandler, RulesImpl rules) {
 		this.turnHandler = turnHandler;
 		this.rules = rules;
 	}

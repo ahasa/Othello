@@ -49,11 +49,8 @@ public class MoveHandlerTest {
 		nodes.add(new NodeImpl(2, 3, true, "b"));
 		nodes.add(new NodeImpl(3, 3, true, "b"));
 		/*
-		 * - w - - 
-		 * b b b w 
-		 * w b b w
-		 * b - b b
-		 * */
+		 * - w - - b b b w w b b w b - b b
+		 */
 		board = new SquareBoard(nodes);
 		rules = new RulesImpl(board);
 		turnHandler = new TurnHandler(players, rules);
@@ -61,7 +58,7 @@ public class MoveHandlerTest {
 		computer = PlayerFactory.CreatePlayer(Type.COMPUTER);
 		players.add(human);
 		players.add(computer);
-		othello = new OthelloImpl(board, rules, turnHandler);
+		othello = new OthelloImpl(board, rules, turnHandler, null);
 		// moveHandler = new MoveHandler(new FirstFoundStrategy(rules, board),
 		// turnHandler);
 	}
@@ -73,7 +70,7 @@ public class MoveHandlerTest {
 		expected.add(new NodeImpl(1, 2, true, "b"));
 		expected.add(new NodeImpl(2, 2, true, "b"));
 		expected.add(new NodeImpl(1, 3, true, "w"));
-		
+
 		// assertTrue(expected.containsAll(othello.move())
 		// && othello.move().containsAll(expected));
 

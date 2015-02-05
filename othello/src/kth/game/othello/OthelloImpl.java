@@ -7,6 +7,7 @@ import kth.game.othello.board.Node;
 import kth.game.othello.player.Player;
 import kth.game.othello.rules.MoveHandler;
 import kth.game.othello.rules.Rules;
+import kth.game.othello.rules.RulesImpl;
 import kth.game.othello.rules.TurnHandler;
 
 public class OthelloImpl implements Othello {
@@ -16,11 +17,11 @@ public class OthelloImpl implements Othello {
 	private TurnHandler turnHandler;
 	private MoveHandler moveHandler;
 
-	public OthelloImpl(Board board, Rules rules, TurnHandler turnHandler) {
+	public OthelloImpl(Board board, Rules rules, TurnHandler turnHandler, MoveHandler moveHandler) {
 		this.board = board;
 		this.rules = rules;
 		this.turnHandler = turnHandler;
-		moveHandler = new MoveHandler(turnHandler, rules);
+		this.moveHandler = moveHandler;
 	}
 
 	@Override
@@ -50,7 +51,7 @@ public class OthelloImpl implements Othello {
 
 	@Override
 	public boolean isActive() {
-		return rules.isActive(getPlayers());
+		return ((RulesImpl) rules).isActive(getPlayers());
 	}
 
 	@Override

@@ -68,7 +68,7 @@ public class RulesImpl implements Rules {
 		throw new IllegalStateException();
 	}
 
-	@Override
+	
 	public boolean isActive(List<Player> players) {
 		for (Player player : players) {
 			if (this.hasValidMove(player.getId()))
@@ -77,7 +77,7 @@ public class RulesImpl implements Rules {
 		return false;
 	}
 
-	@Override
+	
 	public Board getBoard() {
 		return board;
 	}
