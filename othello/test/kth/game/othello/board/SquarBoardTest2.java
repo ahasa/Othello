@@ -9,9 +9,10 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
-public class SquarBoardTest {
+public class SquarBoardTest2 {
 	List<Node> nodes = new ArrayList<>();
 	Board board;
+
 	@Before
 	public void init() {
 		nodes.add(new NodeImpl(0, 0, true, "b"));
@@ -33,23 +34,23 @@ public class SquarBoardTest {
 		nodes.add(new NodeImpl(1, 3, true, "b"));
 		nodes.add(new NodeImpl(2, 3, true, "b"));
 		nodes.add(new NodeImpl(3, 3, true, "b"));
-		
+
 		board = new SquareBoard(nodes);
 	}
+
 	@Test
 	public void testNodeExists() {
-		assertTrue (board.nodeExists(1, 1));
+		assertTrue(board.nodeExists(1, 1));
 	}
-	
+
 	@Test
 	public void testGetNode() {
-		assertEquals (nodes.get(0), board.getNode(0, 0));
+		assertEquals(nodes.get(0), board.getNode(0, 0));
 	}
-	
+
 	@Test
 	public void testGetNodeById() {
-		assertEquals (nodes.get(0), board.getNodeById("00"));
+		assertEquals(nodes.get(0), board.getNodeById("00"));
 	}
-	
 
 }

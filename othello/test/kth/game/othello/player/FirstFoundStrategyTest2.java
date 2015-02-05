@@ -21,7 +21,7 @@ import kth.game.othello.rules.TurnHandler;
 import org.junit.Before;
 import org.junit.Test;
 
-public class FirstFoundStrategyTest {
+public class FirstFoundStrategyTest2 {
 	static List<Node> nodes = new ArrayList<>();
 	Board board;
 	Rules rules;

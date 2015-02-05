@@ -19,7 +19,7 @@ import kth.game.othello.player.PlayerFactory;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TurnHandlerTest {
+public class TurnHandlerTest2 {
 	List<Node> nodes = new ArrayList<>();
 	Board board;
 	Rules rules;
